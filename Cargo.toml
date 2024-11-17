@@ -1,10 +1,22 @@
-workspace = { members = ["saba-nogtk_core"] }
+workspace = { members = ["net/wasabi", "saba-nogtk_core"] }
 [package]
+authors = ["nogtk"]
 name = "saba-nogtk"
 version = "0.1.0"
 edition = "2021"
+default-run = "saba-nogtk"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = ["wasabi"]
+wasabi = ["dep:net_wasabi", "dep:noli"]
+
+[[bin]]
+name = "saba-nogtk"
+path = "src/main.rs"
+required-features = ["wasabi"]
 
 [dependencies]
-noli = { git = "https://github.com/hikalium/wasabi.git", branch = "for_saba" }
+saba-nogtk_core = { path = "saba-nogtk_core" }
+net_wasabi = { path = "net/wasabi", optional = true }
+noli = { git = "https://github.com/hikalium/wasabi.git", branch = "for_saba", optional = true }

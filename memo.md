@@ -5,3 +5,22 @@
         - モジュール化したコードを他のプログラムやクレートに提供できる
 
 今回は saba-nogtk 内部で、URLのパース部分をライブラリクレートとして切り出す。
+
+## 3章
+### Cargo.toml の表記について
+- Features
+    - 条件付きコンパイルや依存の切り替えを行うための機能
+    - cargo --features=xxx で指定できる。
+    - optional もこの feature に対して optional かどうかを指定するもの
+- bin
+    - バイナリファイルの設定を行う
+    - required-features で、生成されるバイナリの条件を設定できる
+
+- compile error について
+    - cannot find macro `format` in this scope
+        - `use alloc::format;` を追加して直った
+    - no method named `to_string` found for reference `&str` in the current scope
+        - `use alloc::string::{String, ToString};` を追加して直った
+    - unresolved import `crate::entry_point`
+    - unresolved import `sys::os`
+        - 両方 saba-nogtk_core でテスト実行したら直った
