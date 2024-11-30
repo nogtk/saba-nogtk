@@ -24,3 +24,13 @@
     - unresolved import `crate::entry_point`
     - unresolved import `sys::os`
         - 両方 saba-nogtk_core でテスト実行したら直った
+
+- Rc
+    - strong pointer
+- Weak
+    - weak pointer
+
+らしい。全然分かってない。
+
+- if let 構文慣れが必要そう
+    - https://qiita.com/plotter/items/0d8dc2782f21178d64f1
