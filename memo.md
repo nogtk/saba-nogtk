@@ -25,6 +25,7 @@
     - unresolved import `sys::os`
         - 両方 saba-nogtk_core でテスト実行したら直った
 
+## 4章
 - Rc
     - strong pointer
 - Weak
@@ -34,3 +35,8 @@
 
 - if let 構文慣れが必要そう
     - https://qiita.com/plotter/items/0d8dc2782f21178d64f1
+
+
+## 5章
+- Rust の mod についてちゃんと調べる
+- Rust の Iterator の使い方について
